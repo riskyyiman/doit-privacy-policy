@@ -114,12 +114,20 @@
 
       @media (max-width: 600px) {
         .navbar {
-          flex-direction: column;
-          align-items: flex-start;
+          flex-direction: row; /* tetap flex row */
+          flex-wrap: wrap; /* biar elemen bisa turun ke baris baru jika sempit */
+          justify-content: space-between;
+          align-items: center;
         }
 
-        h1 {
-          font-size: 1.5em;
+        .navbar h1 {
+          font-size: 1.2em;
+          flex: 1 1 100%;
+          margin-bottom: 10px;
+        }
+
+        .navbar a {
+          font-size: 0.95em;
         }
 
         .content {
